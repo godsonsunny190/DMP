@@ -1,0 +1,38 @@
+// Color system
+// color names are auto generated in http://www.color-blindness.com/color-name-hue/
+$white: #fff !default;
+$black: #000 !default;
+$blue: #51c4cc !default;
+$text-green: #1D9D48 !default;
+$grey: #384133 !default;
+$dark: #161715 !default;
+$background-color:#1F1F26 !default;
+$border-color: #707070 !default;
+$text-p: #5F5F5F !default;
+$border-radius: 25px !default;  
+$input-color:#F9F4F2;
+// Fonts
+$font-family-gtsectra: 'GT Sectra Book' !default;
+$font-family-default: $font-family-gtsectra !default;
+$font-size-default: 14px !default; // Assumes the browser default,
+$font-size-large: ($font-size-default * 1.75) !default;
+$font-size-small: ($font-size-default * .875) !default; 
+
+$font-family-cera:'Cera', sans-serif !default;
+$font-family-secondary: $font-family-cera !default;
+$font-size-default: 14px !default; // Assumes the browser default,
+$font-size-large: ($font-size-default * 1.75) !default;
+$font-size-small: ($font-size-default * .875) !default;
+
+$font-weight-thin: 300 !default;
+$font-weight-light: 100 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 900 !default;
+$font-weight-default: $font-weight-regular !default;
+
+$line-height-default: 2 !default;
+$line-height-medium: 1.5 !default;
+$line-height-small: 1.2 !default; 

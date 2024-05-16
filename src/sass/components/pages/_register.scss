@@ -1,0 +1,190 @@
+.register-main {
+  .register {
+    &__title {
+      text-align: center;
+      color: #384133;
+      margin-bottom: 60px;
+    }
+
+    &__wrapper {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    &__input {
+      label {
+        margin-bottom: 18px;
+        font-size: 20px;
+        color: $dark;
+        font-weight: $font-weight-regular;
+        font-family: $font-family-cera;
+      }
+
+      input {
+        margin-bottom: 40px;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 65px;
+        font-size: 25px;
+        background-color: $input-color;
+        border-radius: 8px;
+        border: 1px solid #e6e6e6;
+      }
+
+      &:last-child {
+        input {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+
+      .primary-btn {
+        margin: 0;
+        width: 244px;
+        height: 49px;
+        padding-left: 60px;
+
+        svg {
+          margin-left: 57px;
+        }
+      }
+    }
+    &__terms {
+      max-width: 478px;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 auto;
+      margin-top: 50px;
+      color: #161715;
+      font-weight: $font-weight-regular;
+      font-family: $font-family-cera;
+
+      span {
+        color: $grey;
+      }
+    }
+    &__signin {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      color: #161715;
+      font-size: 25px;
+      font-weight: $font-weight-regular;
+      font-family: $font-family-cera;
+
+      span {
+        color: $blue;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////
+// Media query
+//////////////////////////////////////////////////
+
+@include media-breakpoint-down(xxl) {
+  .register-main .register__input input {
+    margin-bottom: 20px;
+    height: 56px;
+  }
+  .register-main .register__input label {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+
+// for small devices (768px)
+@include media-breakpoint-down(md) {
+  .register-main {
+    .register {
+      &__title {
+        // font-size: 50px;
+        margin-bottom: 20px;
+      }
+      &__input {
+        margin-bottom: 30px;
+
+        label {
+          font-size: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Media query (576px)
+
+@include media-breakpoint-down(sm) {
+  .register-main {
+    .register {
+      .container {
+        max-width: 480px;
+      }
+      &__title {
+        font-size: 30px;
+      }
+
+      &__input {
+        margin-bottom: 0 !important;
+
+        input {
+          margin-bottom: 20px;
+          height: 50px;
+          font-size: 15px;
+        }
+        label {
+          font-size: 12px !important;
+        }
+      }
+      &__btn {
+        margin-top: 30px;
+      }
+      &__terms {
+        font-size: 13px;
+        margin-top: 30px;
+      }
+      &__signin {
+        font-size: 15px;
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+// Media query  (0)
+
+@include media-breakpoint-down(xs) {
+  .register-main {
+    .register {
+    
+
+      &__btn {
+        margin-top: 30px;
+        .primary-btn {
+          width: 164px;
+          padding-left: 36px;
+          align-items: center;
+          font-size: 13px;
+          svg {
+            margin-left: 30px;
+          }
+        }
+      }
+
+      &__terms {
+        font-size: 13px;
+      }
+      &__signin {
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+.events-sec {
+  .events {
+    justify-content: space-between;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .flexbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__block {
+      h2 {
+        font-size: 55px;
+      }
+
+      p {
+        max-width: 520px;
+        line-height: 32px;
+        font-family: $font-family-cera;
+        font-weight: $font-weight-regular;
+      }
+
+      &--link {
+        padding-top: 64px;
+      }
+
+      .offers {
+        margin: 150px 0;
+
+        &__description {
+          font-family: $font-family-cera;
+          max-width: 962px;
+
+          ul {
+            margin-top: 30px;
+            margin-bottom: 65px;
+
+            li {
+              padding-left: 30px;
+              position: relative;
+              max-width: 410px;
+
+              &:after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/arrow.png");
+                left: 0;
+                top: 12px;
+                width: 13px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      .primary-btn {
+        width: 185px;
+      }
+    }
+
+    &__jumping {
+      position: absolute;
+      width: 421px;
+      right: 10%;
+      top: 35%;
+    }
+
+    &__group {
+      position: absolute;
+      left: 30%;
+      top: 65%;
+      width: 426px;
+    }
+
+    &__image {
+      width: 100vw;
+      height: 100vh;
+      max-width: 656px;
+      max-height: 651px;
+      padding: 1rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      mask-image: url("../images/round.svg");
+      mask-size: 100vmin;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    .container {
+      max-width: 1292px;
+
+      .d-flex {
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        margin-bottom: 100px;
+     
+      }
+    }
+    .loadmore{
+        .primary-btn{
+            margin: 50px auto;
+        }
+    }
+  }
+  .bottom-btn {
+    .primary-btn {
+      margin: 0 auto;
+      margin-bottom: 120px;
+    }
+  }
+}
+
+///////////////////////////////////////////
+// Media Quries
+///////////////////////////////////////////
+@include media-breakpoint-down(xxl) {
+  .events-sec {
+    .events {
+      .container {
+        max-width: 1140px;
+        .d-flex {
+          margin-top: 0;
+        }
+      }
+
+      &__jumping {
+        width: 300px;
+        right: 6%;
+        top: 30%;
+      }
+
+      &__group {
+        left: 30%;
+        top: 60%;
+        width: 300px;
+      }
+    }
+    .events__image {
+      max-width: 460px;
+      height: 80vh;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .events-sec {
+    .events {
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      &__image {
+        width: 80vh;
+      }
+      .container {
+        .d-flex {
+          margin: 0;
+          justify-content: center;
+
+          .events__block {
+            order: 1;
+
+            p {
+              font-size: 15px;
+              line-height: 25px;
+              max-width: 600px;
+            }
+
+            .primary-btn {
+              margin-bottom: 30px !important;
+            }
+          }
+        }
+      }
+      .events__block {
+        .gs_reveal {
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+    .bottom-btn {
+      .primary-btn {
+        margin: 0 auto;
+        margin-bottom: 70px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .events-sec {
+    .events {
+      &__image {
+        height: 50vh;
+      }
+
+      .container {
+        .d-flex {
+          .events__block {
+            p {
+              font-size: 12px;
+            }
+
+            .primary-btn {
+              // margin: 0 auto;
+              margin-top: 30px;
+              width: 156px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

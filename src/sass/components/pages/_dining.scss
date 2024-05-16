@@ -1,0 +1,226 @@
+.dining-sec {
+    .dining {
+        justify-content: space-between;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+
+        &__block {
+            h3 {
+                max-width: 307px;
+                width: 100%;
+               cursor: pointer;
+            }
+            a{
+                display: inline-block;
+            }
+            .sub-title{
+                max-width: 345px;
+                width: 100%;
+            }
+
+            p {
+                max-width: 520px;
+                line-height: 32px;
+                font-size: 20px;
+                font-family: $font-family-cera;
+                font-weight: $font-weight-regular;
+            }
+
+            &--link {
+                padding-top: 64px;
+            }
+
+            .offers {
+                margin: 150px 0;
+
+                &__description {
+                    font-family: $font-family-cera;
+                    max-width: 962px;
+
+                    ul {
+                        margin-top: 30px;
+                        margin-bottom: 65px;
+
+                        li {
+                            padding-left: 30px;
+                            position: relative;
+                            max-width: 410px;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                background-image: url('../images/arrow.png');
+                                left: 0;
+                                top: 12px;
+                                width: 13px;
+                                height: 18px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .primary-btn {
+                width: 206px;
+            }
+        }
+
+        &__coffe {
+            width: 366px;
+            position: absolute;
+            right: 33%;
+            top: 48%;
+        }
+
+        &__image {
+            width: 100vw;
+            height: 100vh;
+            max-width: 656px;
+            max-height: 651px;
+            padding: 1rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            mask-image: url('../images/round.svg');
+            mask-size: 100vmin;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+
+        .container {
+            max-width: 1292px;
+
+            .d-flex {
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+
+
+        }
+
+    }
+    
+    .loadmore{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+}
+
+///////////////////////////////////////////
+// Media Quries 
+///////////////////////////////////////////
+@include media-breakpoint-down(xxl){
+    .dining-sec {
+    
+        .dining{
+           &__block{
+                p{
+                    font-size: 15px;
+                }
+               
+           }
+
+            &__image{
+                max-width: 450px;
+            }
+
+            .container{
+                .d-flex{
+                    margin-top: 70px;
+                    justify-content: space-around;
+                }
+            }
+
+        }
+        .dining__coffe{
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .offers{
+            &__description{
+                ul li{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .dining-sec {
+        .dining {
+            h2 {
+                margin-bottom: 40px;
+            }
+
+            .d-flex {
+                flex-wrap: wrap;
+                justify-content: center !important;
+                margin: 0 !important;
+            }
+
+            &__image {
+                height: 70vh;
+            }
+
+            &__block {
+
+                order: 1;
+                padding: 0 22px;
+            }
+
+            p {
+                line-height: 25px;
+                font-size: 14px;
+            }
+
+            .offers__description {
+                ul {
+                    li {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .primary-btn {
+                width: 150px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+            
+        }
+        .dining__block h3 {
+            max-width: 307px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+    }
+
+}
+
+
+@include media-breakpoint-down(xs) {
+    .dining-sec {
+        .dining {
+
+            &__image {
+                height: 30vh;
+                max-width: 235px;
+            }
+
+        }
+
+    }
+}

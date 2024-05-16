@@ -1,0 +1,272 @@
+.enquiry {
+  margin-bottom: 76px;
+
+  &__modaldialog {
+    max-width: 640px;
+    background: $input-color;
+    width: 100%;
+    border-radius: 10px;
+    padding: 50px 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__modalcontent {
+      background-color: transparent;
+
+      &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        h5 {
+          font-size: 35px;
+        }
+
+        button {
+          border: none;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .modalbody {
+      &__inputfeilds {
+        .blockone {
+          width: 100%;
+
+          h4 {
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-family: $font-family-cera;
+            font-weight: $font-weight-regular;
+            color: $dark;
+
+            &::after {
+              content: "*";
+              color: #eb2b1d;
+              margin-left: 4px;
+            }
+          }
+        }
+
+        .blocktwo {
+          width: 100%;
+        }
+
+        &--inputbox {
+          margin-bottom: 30px;
+
+          input {
+            outline: none;
+            width: 100%;
+            height: 65px;
+            font-size: 25px;
+            background-color: $input-color;
+            border-radius: 8px;
+            border: 1px solid #e6e6e6;
+            padding: 0 11px;
+
+            &::placeholder {
+              font-size: 20px;
+              color: $dark;
+              font-family: $font-family-cera;
+              font-weight: $font-weight-regular;
+            }
+          }
+
+          label {
+            font-size: 20px;
+            color: #161715;
+            font-family: $font-family-cera;
+            font-weight: $font-weight-regular;
+            margin-bottom: 10px;
+
+            &.required::after {              
+              color: #eb2b1d;
+              margin-left: 4px;
+            }
+          }
+
+          &.adults,
+          &.kids {
+            input {
+              margin-left: 30px;
+            }
+          }
+
+          select {
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            width: 100%;
+            height: 65px;
+            font-size: 20px;
+            background-color: $input-color;
+          }
+        }
+      }
+
+      .modalbody__btn {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// ////////////////////////////////////////
+// Media Quries
+///////////////////////////////////////////
+@include media-breakpoint-down(xxl) {
+  .enquiry {
+    &__modaldialog {
+      max-width: 500px;
+      padding: 25px 40px;
+
+      &__modalcontent {
+        &--header {
+          margin-bottom: 15px;
+        }
+      }
+
+      .modalbody {
+        &__btn {
+          .primary-btn {
+            margin: 0 auto;
+          }
+        }
+        &__inputfeilds {
+          &--inputbox {
+            margin-bottom: 15px;
+
+            &.kids input {
+              margin-left: 10px;
+            }
+            &.adults input {
+              margin-left: 10px;
+            }
+
+            input {
+              font-size: 16px;
+              height: 57px;
+              &::placeholder {
+                font-size: 16px;
+              }
+            }
+            label {
+              font-size: 16px;
+            }
+            select {
+              height: 57px;
+              font-size: 16px;
+            }
+          }
+
+          .blockone {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .enquiry {
+    &__modaldialog {
+      &__modalcontent {
+        &--header {
+          margin-bottom: 10px;
+
+          h5 {
+            font-size: 25px;
+          }
+        }
+
+        &--button {
+          svg {
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .enquiry {
+    &__modaldialog {
+      width: calc(100% - 40px);
+      padding: 18px 32px;
+
+      .modalbody {
+        &__inputfeilds {
+          .blockone {
+            h4 {
+              font-size: 12px;
+              margin-bottom: 0;
+            }
+          }
+
+          &--inputbox {
+            margin-bottom: 20px;
+
+            label {
+              font-size: 12px;
+              margin-bottom: 0;
+            }
+
+            input {
+              height: 40px;
+              font-size: 15px;
+
+              &::placeholder {
+                font-size: 12px;
+              }
+            }
+
+            &.adults,
+            &.kids {
+              flex-wrap: wrap;
+
+              input {
+                font-size: 15px;
+                height: 40px;
+                margin-left: 0;
+              }
+
+              label {
+                font-size: 12px;
+                margin-bottom: 0;
+              }
+            }
+
+            select {
+              height: 40px;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .modalbody__btn {
+          .primary-btn {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .enquiry {
+    .container {
+      max-width: 480px;
+    }
+  }
+}

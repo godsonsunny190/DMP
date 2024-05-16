@@ -1,0 +1,544 @@
+.dining-main {
+  .dining {
+    justify-content: space-between;
+
+    h2 {
+      margin-bottom: 80px;
+    }
+
+    &__block {
+      h2 {
+        font-size: 75px;
+      }
+
+      p {
+        max-width: 520px;
+        line-height: 32px;
+        font-family: $font-family-cera;
+        font-weight: $font-weight-regular;
+        color: $grey;
+      }
+
+      .primary-btn {
+        width: 206px;
+      }
+    }
+
+    &__image {
+      width: 100vw;
+      height: 100vh;
+      max-width: 656px;
+      max-height: 651px;
+      padding: 1rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      mask-image: url("../images/round.svg");
+      mask-size: 100vmin;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    .container {
+      max-width: 1292px;
+
+      .d-flex {
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .dining__wrapper {
+    &__content {
+      display: flex;
+      gap: 190px;
+
+      p {
+        font-family: $font-family-cera;
+        font-weight: $font-weight-regular;
+        line-height: 1.6;
+        color: $grey;
+      }
+    }
+
+    .chef-icon {
+      max-width: 388px;
+      width: 100%;
+      margin: 50px auto;
+    }
+
+    .timing {
+      margin-top: 100px;
+
+      &__rate {
+        font-family: Cera, sans-serif;
+        width: 160px;
+        height: 160px;
+        background: #384133;
+        border-radius: 50%;
+        text-align: center;
+        padding: 40px 25px;
+        display: flex;
+        justify-content: center;
+
+        p {
+          font-size: 40px;
+          color: #fff;
+          font-family: $font-family-gtsectra;
+        }
+      }
+
+      &__description {
+        font-family: $font-family-cera;
+        margin-left: 110px;
+
+        p {
+          max-width: 962px;
+        }
+
+        ul {
+          margin-top: 30px;
+
+          li {
+            padding-left: 30px;
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              background-image: url("../images/arrow.png");
+              left: 0;
+              bottom: 10px;
+              width: 13px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dishes {
+    margin-top: 150px;
+    position: relative;
+    max-width: 918px;
+    padding: 76px;
+
+    &__wrapper {
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid #384133;
+      border-radius: 20px;
+      padding: 134px 162px;
+
+      img {
+        max-width: 273px;
+      }
+
+      &--title {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        padding: 0;
+      }
+
+      .dishes-name {
+        font-size: 40px;
+        font-weight: $font-weight-regular;
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.6;
+        margin: 30px 0;
+        font-family: $font-family-cera;
+      }
+
+      h4 {
+        font-size: 40px;
+        font-family: $font-family-gtsectra;
+      }
+
+      .tail {
+        max-width: 107px;
+        margin: 50px 0;
+      }
+
+      .dishes-price {
+        margin-bottom: 50px;
+      }
+    }
+
+    #dining-next,
+    #dining-prev {
+      font-family: $font-family-cera;
+      position: absolute;
+      top: 10.5%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+
+    #dining-next {
+      left: 0;
+    }
+
+    #dining-prev {
+      right: 0;
+    }
+  }
+
+  .swiper-button-prev {
+    margin-right: 0px;
+  }
+
+  .related {
+    margin-bottom: 200px;
+    margin-top: 150px;
+
+    &__list {
+      justify-content: space-between;
+
+      &--item {
+        width: 30%;
+        min-width: 30%;
+
+        &:nth-of-type(3n + 2) {
+          margin-top: 80px;
+          gap: 0 30px;
+        }
+
+        h6 {
+          margin-top: 35px;
+          font-size: 18px;
+          font-weight: $font-weight-normal;
+        }
+      }
+    }
+
+    .related__img {
+      max-width: 460px;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+
+///////////////////////////////////////////
+// Media Quries
+///////////////////////////////////////////
+@include media-breakpoint-down(xxl) {
+  .dining-main {
+    .dining__image {
+      height: 81vh;
+      max-width: 460px;
+      width: 100%;
+    }
+
+    .dishes {
+      margin-top: 0;
+      max-width: 750px;
+      padding: 75px;
+
+      #dining-next,
+      #dining-prev {
+        z-index: 9;
+      }
+
+      &__wrapper {
+        // max-width: 750px;
+        // padding: 80px 162px;
+        max-width: 100%;
+        padding: 80px 35px;
+
+        &--title {
+          font-size: 35px;
+          margin-top: 40px;
+          margin-bottom: 46px;
+        }
+
+        .dishes-name {
+          font-size: 25px;
+        }
+
+        p {
+          margin: 30px 0;
+          font-size: 14px;
+        }
+
+        h4 {
+          font-size: 35px;
+        }
+
+        .tail {
+          margin: 30px auto;
+        }
+      }
+
+      #dining-next {
+        left: 0px;
+        top: 10.5%;
+      }
+
+      #dining-prev {
+        right: 0px;
+        top: 10.5%;
+      }
+    }
+
+    .chef-icon {
+      max-width: 280px !important;
+    }
+
+    .package h4 {
+      text-align: center;
+      font-size: 17px;
+      line-height: 25px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .swiper-button-prev {
+      margin-right: 0px;
+
+      &:hover {
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
+          brightness(90%) contrast(86%);
+      }
+    }
+
+    .swiper-button-next {
+      &:hover {
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
+          brightness(90%) contrast(86%);
+      }
+    }
+
+    .swiper-button-wrapper {
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .rate__package {
+      h4 {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .related {
+      .related__img {
+        max-width: 364px;
+        height: 265px;
+      }
+    }
+
+    .timing {
+      h3 {
+        margin-left: 28px;
+      }
+
+      &__description {
+        ul {
+          li {
+            &::after {
+              bottom: 2px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .dining-main {
+    .dining {
+      &__block {
+        margin-top: 50px;
+
+        h3 {
+          justify-content: center;
+        }
+
+        .primary-btn {
+          width: 150px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .dining__wrapper {
+      &__content {
+        gap: 55px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .dining-main {
+    .dining {
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      .d-flex {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        margin: 0 !important;
+      }
+
+      &__block {
+        order: 1;
+
+        p {
+          line-height: 25px;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .dining__wrapper {
+      &__content {
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .timing {
+      &__description {
+        ul {
+          li {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .dishes {
+      margin-top: 80px;
+    }
+
+    .related {
+      margin-bottom: 40px;
+      margin-top: 0px;
+
+      &__list {
+        justify-content: space-between;
+
+        &--item {
+          width: 30%;
+          min-width: 30%;
+
+          &:nth-of-type(3n + 2) {
+            margin-top: 80px;
+            gap: 0 30px;
+          }
+
+          h6 {
+            margin-top: 35px;
+            font-size: 18px;
+            font-weight: $font-weight-normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .dining-main {
+    .dishes {
+      padding: 0;
+    }
+
+    .dishes__wrapper--title {
+      margin-bottom: 140px;
+    }
+
+    .dishes #dining-next {
+      left: 20px;
+      gap: 3px;
+      top: 11%;
+    }
+
+    .dishes #dining-prev {
+      right: 20px;
+      gap: 3px;
+      top: 11%;
+    }
+
+    .timing {
+      h3 {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .dining-main {
+    .dining {
+      &__image {
+        height: 50vh;
+      }
+
+      &__block {
+        h3 {
+          justify-content: left;
+        }
+      }
+    }
+
+    .package {
+      .nearby__wrapper {
+        padding: 0 20px;
+      }
+    }
+
+    .timing {
+      margin-top: 50px !important;
+
+      h3 {
+        justify-content: center;
+      }
+
+      .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      &__description {
+        margin-left: 0 !important;
+
+        p {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .dining__wrapper .timing__rate {
+      width: 130px;
+      height: 130px;
+
+      p {
+        font-size: 29px;
+      }
+    }
+  }
+}

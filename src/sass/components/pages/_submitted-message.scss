@@ -1,0 +1,124 @@
+.submitted-msg{
+    margin-bottom: 76px;
+    .modal{
+        top: unset;
+    }
+    &__modal{
+        margin-top: 120px;
+        max-width: 640px;
+        width: 100%;
+        min-height: 267px;
+        background-color: #F9F4F2;
+        margin: 0 auto;
+        border-radius: 10px;
+        .close-btn{
+            border: none;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            svg{
+                width: 23px;
+                height: 23px;
+            }
+        }
+       
+        .modal-content{
+            padding: 30px;
+        }
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-title{
+            font-size: 30px;
+            font-weight:$font-weight-regular;
+            font-family: $font-family-gtsectra;
+        }
+        .modal-message{
+            font-size: 20px;
+            color: #384133;
+            margin: 28px 0 40px 0;
+        }
+        .modal-footer{
+            display: flex;
+            justify-content: flex-end;
+
+            .btn-primary{
+                border: 1px solid $blue;
+                border-radius: 25px;
+                width: 120px;
+                height: 49px;
+                font-size: 20px;
+                font-family: $font-family-cera;
+                font-weight: $font-weight-regular;
+                color: #384133;
+                
+            }
+            .btn-secondary{
+                border: none;
+                background: transparent;
+                font-family: $font-family-gtsectra;
+            }
+        }
+
+    }
+   
+}
+
+// //////////////////////////////////////// 
+// Media Quries 
+///////////////////////////////////////////
+
+// Media Quries (0 >)
+@include media-breakpoint-down(xxl){
+    .submitted-msg__modal{
+        max-width: 555px;
+    }
+    .submitted-msg__modal .modal-title{
+        font-size: 28px;
+    }
+    .submitted-msg__modal .modal-message{
+        font-size: 18px;
+        margin: 6px 0 15px;
+    }
+   
+}
+@include media-breakpoint-down(xs){
+    .submitted-msg{
+          .container{
+                max-width: 480px;
+            }
+        &__modal{
+            min-height: fit-content;
+            width: calc(100% - 30px);
+            .close-btn{
+                svg{
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            .modal-content{
+                padding: 20px;
+             }
+             .modal-title{
+                font-size: 20px;
+            }
+            .modal-message{
+                margin: 15px 0 20px 0;
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .modal-footer{
+                .btn-primary{
+                    width: 68px;
+                    height: 34px;
+                    font-size: 15px;
+                  }
+                  .btn-secondary{
+                    font-size: 15px;
+                  }
+            }
+        }
+    }     
+}

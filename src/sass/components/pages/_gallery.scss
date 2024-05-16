@@ -1,0 +1,185 @@
+.gallery {
+  .my-masonry-grid-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+  .gallery-btn a {
+    margin: 0 auto;
+    margin-top: 35px;
+} 
+
+  .gallery-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #14161673;
+    border-radius: 10px;
+
+    .overlay-text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/arrow.png);
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        top: 32%;
+        right: 21%;
+        -webkit-filter: invert(94%) sepia(94%) saturate(0) hue-rotate(79deg) brightness(106%) contrast(108%);
+        filter: invert(94%) sepia(94%) saturate(0) hue-rotate(79deg) brightness(106%) contrast(108%);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    margin-top: 60px;
+
+    .gallery__nav{
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+
+      .nav-link{
+        display: inline-block;
+      }
+
+      .desktop {
+        max-width: 240px;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: -41px;
+      }
+    }
+
+    .gallery__tab {
+      width: 60%;
+    }
+
+    .nav {
+      flex-direction: column;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+
+    .nav-link {
+      font-size: 30px;
+      font-family: $font-family-cera;
+      font-family: $font-weight-regular;
+      color: $grey;
+      border: none;
+
+      &.active {
+        color: $blue;
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    .my-masonry-grid-item {
+      margin: 0 6px 12px;
+      position: relative;
+
+      img {
+        border-radius: 10px;
+
+      }
+
+
+    }
+
+
+  }
+}
+
+
+
+@include media-breakpoint-down(xxl) {
+  .gallery {
+
+    &__wrapper {
+
+      .gallery__nav {
+
+        .nav-link {
+          font-size: 25px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+@include media-breakpoint-down(sm) {
+  .gallery__wrapper {
+    display: block;
+    margin-top: 20px;
+
+    .gallery__nav {
+      width: 100%;
+
+      .desktop {
+        display: none;
+      }
+
+      .nav {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .gallery__tab {
+      width: 100%;
+    }
+
+  }
+
+  .mob-icon {
+    display: block !important;
+    max-width: 300px;
+    width: 100%;
+    margin: 50px auto;
+  }
+
+}
+
+@include media-breakpoint-down(xs) {
+  .gallery__tab .container {
+    max-width: 100%;
+  }
+  .gallery__wrapper .gallery__nav {
+    position: unset;
+  }
+  .gallery__wrapper .gallery__nav .nav-link {
+    font-size: 14px;
+  }
+
+
+}

@@ -1,0 +1,512 @@
+.general-info {
+  .general {
+    h2 {
+      margin-bottom: 50px;
+    }
+
+    &__wrapper {
+      margin-bottom: 0px;
+      align-items: center;
+
+      &__block {
+        margin: 0 auto;
+        margin-bottom: 80px;
+
+        h3 {
+          font-size: 55px;
+          justify-content: center;
+        }
+
+        p {
+          max-width: 705px;
+          text-align: center;
+          font-family: $font-family-cera;
+        }
+      }
+
+      &__image {
+        width: 100vw;
+        height: 100vh;
+        max-width: 656px;
+        max-height: 500px;
+        padding: 1rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        mask-image: url("../images/round.svg");
+        mask-size: 100vmin;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+
+    &__dibba {
+      max-width: 845px;
+      margin: 0 auto;
+      margin-top: 30px;
+
+      p {
+        font-family: $font-family-cera;
+      }
+
+      h3 {
+        justify-content: center;
+      }
+
+      &__mountain-icon {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 160px;
+
+        img {
+          width: 243px;
+          height: auto;
+          position: absolute;
+          bottom: 50px;
+          right: 10%;
+        }
+      }
+    }
+  }
+
+  .landmarks {
+    margin-top: 100px;
+
+    .d-flex {
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 130px;
+      gap: 30px;
+    }
+
+    &__block {
+      h2 {
+        font-size: 75px;
+      }
+
+      p {
+        max-width: 630px;
+        font-family: $font-family-cera;
+      }
+
+      &--link {
+        padding-top: 64px;
+      }
+
+      ul {
+        margin-top: 30px;
+        margin-bottom: 65px;
+        display: flex;
+        max-width: 650px;
+        flex-wrap: wrap;
+        gap: 20px 130px;
+
+        li {
+          padding-left: 40px;
+          position: relative;
+          font-family: $font-family-cera;
+
+          &:after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/tick.png");
+            left: 0px;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            margin-right: 15px;
+          }
+
+          p {
+            color: #71776c;
+          }
+        }
+      }
+    }
+
+    &__image {
+      width: 100vw;
+      height: 100vh;
+      max-width: 786px;
+      max-height: 577px;
+      padding: 1rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      mask-image: url("../images/rectangle.svg");
+      mask-size: 100vmin;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+  }
+
+  .nearby {
+    margin-top: 150px;
+
+    h3 {
+      justify-content: center;
+    }
+
+    &__wrapper {
+      margin-bottom: 150px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &__block {
+        margin: 0 auto;
+        margin-bottom: 150px;
+        width: 33.333%;
+        justify-content: center;
+        text-align: center;
+
+        h3 {
+          font-size: 55px;
+          justify-content: center;
+        }
+
+        h4 {
+          font-size: 30px;
+          margin-top: 50px;
+          margin-bottom: 13px;
+          font-family: $font-family-gtsectra;
+          font-weight: $font-weight-medium;
+          color: $grey;
+        }
+
+        p {
+          max-width: 705px;
+          text-align: center;
+          font-family: $font-family-cera;
+        }
+      }
+
+      &__image {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        max-height: 322px;
+        margin: 0 auto;
+        padding: 1rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        mask-image: url("../images/round.svg");
+        mask-size: 100vmin;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+
+    &__mountain-icon {
+      display: flex;
+      justify-content: center;
+      margin: 150px auto;
+    }
+  }
+}
+
+@include media-breakpoint-down(xxl) {
+  .general-info {
+    .general {
+      &__wrapper {
+        &__image {
+          max-width: 460px;
+          width: 100%;
+          height: 87vh;
+        }
+
+        &__block {
+          p {
+            max-width: 550px;
+            width: 100%;
+          }
+        }
+      }
+
+      &__dibba {
+        p {
+          max-width: 650px;
+          margin: 0 auto;
+          margin-bottom: 100px;
+        }
+
+        &__mountain-icon {
+          img {
+            max-width: 200px;
+          }
+        }
+      }
+    }
+
+    .general__dibba__mountain-icon {
+      margin-bottom: 0;
+    }
+
+    .nearby {
+      margin-top: 0 !important;
+
+      &__wrapper {
+        margin-bottom: 0px;
+
+        &__image {
+          max-width: 270px;
+          width: 100%;
+        }
+
+        &__block {
+          h4 {
+            margin-top: 15px;
+          }
+        }
+      }
+
+      &__mountain-icon {
+        margin: 58px auto;
+        max-width: 550px;
+        width: 100%;
+      }
+    }
+
+    .landmarks {
+      margin-top: 0;
+
+      .container {
+        .d-flex {
+          margin-top: 0;
+          flex-wrap: nowrap;
+        }
+      }
+    }
+
+    .landmarks__image {
+      max-width: 450px;
+      height: 60vh;
+    }
+
+    .nearby__wrapper__image {
+      max-height: 270px;
+    }
+
+    .nearby__wrapper__block {
+      margin-bottom: 100px !important;
+    }
+
+    .nearby__wrapper__block h4 {
+      font-size: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .general-info {
+    .general {
+      &__wrapper {
+        margin-bottom: 100px;
+      }
+    }
+
+    .nearby {
+      &__mountain-icon {
+        margin: 65px auto;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .general-info .general__wrapper__image {
+    margin: 0px 0;
+  }
+
+  .general-info h2 {
+    margin-bottom: 30px;
+  }
+  .general-info .landmarks__image {
+    max-width: 800px;
+  }
+  .general-info .landmarks__image {
+    height: 70vh;
+  }
+}
+
+.landmarks {
+  .container {
+    .d-flex {
+      margin-top: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  .news-detail .news__wrap .tb-border {
+    border-bottom: 1px solid #b4b3b2;
+    border-top: 1px solid #b4b3b2;
+    padding: 15px 0;
+    justify-content: space-between;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .general-info {
+    .general {
+      &__wrapper {
+        justify-content: center !important;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+
+        &__block {
+          order: 2;
+          margin-bottom: 20px !important;
+          margin-top: 20px;
+
+          h3 {
+            font-size: 40px;
+          }
+        }
+      }
+
+      &__dibba {
+        p {
+          margin-bottom: 0;
+        }
+
+        &.mountain-icon {
+          margin-bottom: 0;
+          bottom: -6%;
+          max-width: 104px;
+        }
+      }
+    }
+
+    .landmarks {
+      .container {
+        .d-flex {
+          margin-top: 120px;
+          flex-wrap: wrap;
+
+          &.landmarks-wrapper {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &__block {
+      ul {
+        margin-bottom: 20px;
+      }
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 17px;
+      line-height: 25px;
+    }
+
+    .swiper-button-wrapper {
+      justify-content: center;
+      padding-bottom: 15px;
+    }
+
+    .swiper-button-prev {
+      margin-right: 15px;
+
+      &:hover {
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
+          brightness(90%) contrast(86%);
+      }
+    }
+
+    .swiper-button-next {
+      &:hover {
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
+          brightness(90%) contrast(86%);
+      }
+    }
+
+    .package p {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .landmarks__block {
+      margin-top: 10px;
+      order: 2;
+    }
+
+    .swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+      text-align: center;
+    }
+
+    .general__dibba__mountain-icon img {
+      bottom: -6%;
+      width: 130px;
+    }
+
+    .nearby {
+      margin-top: 0;
+
+      &__wrapper {
+        margin-bottom: 50px;
+
+        &__block {
+          width: 100%;
+          margin-bottom: 0;
+        }
+      }
+      &__mountain-icon {
+        margin: 34px auto;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .general-info {
+    .general {
+      &__wrapper {
+        &__block {
+          margin-bottom: 0;
+        }
+
+        &__image {
+          height: 41vh;
+        }
+      }
+
+      &__dibba {
+        &__mountain-icon {
+          img {
+            width: 105px;
+          }
+        }
+      }
+    }
+    .landmarks {
+      &__block {
+        ul {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .general-info {
+    .general__wrapper__block p {
+      text-align: left;
+    }
+    .nearby__mountain-icon {
+      max-width: 239px;
+    }
+    .general__dibba__mountain-icon img {
+      width: 105px;
+      bottom: -5%;
+    }
+    .landmarks {
+      &__image {
+        height: 38vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@include font-face(
+  'Cera-Light',
+  '../fonts/Cera Pro Light',
+  300,
+  normal,
+  otf
+); 
+@include font-face(
+  'Cera',
+  '../fonts/Cera Pro Regular',
+  400,
+  normal,
+  otf
+);
+@include font-face( 
+  'Cera-Medium',
+  '../fonts/Cera Pro Medium',
+  500,
+  normal,
+  otf
+); 
+ 
+@include font-face( 
+  'Cera-Bold',
+  '../fonts/Cera Pro Bold',
+  700,
+  normal,
+  otf
+); 
+@include font-face( 
+  'Cera-Bold',
+  '../fonts/Cera Pro Bold',
+  700,
+  normal,
+  otf
+); 
+@include font-face( 
+  'GT Sectra Book',
+  '../fonts/GTSectra-Book',
+  400,
+  normal,
+  woff
+); 
+// @font-face {
+//   font-family: 'GT Sectra Book';
+//   src: url('GTSectra-Book.woff2') format('woff2'),
+//       url('GTSectra-Book.woff') format('woff');
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'FONTSPRING DEMO - Cera Pro';
+//   src: url('FONTSPRINGDEMO-CeraProRegular.woff2') format('woff2'),
+//       url('FONTSPRINGDEMO-CeraProRegular.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+  
+@font-face {
+  font-family: 'PT Serif';
+  src: url('PTSerif-Regular.woff2') format('woff2'),
+      url('PTSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('PTSerif-Bold.woff2') format('woff2'),
+      url('PTSerif-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('PTSerif-Italic.woff2') format('woff2'),
+      url('PTSerif-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif Caption';
+  src: url('PTSerif-Caption.woff2') format('woff2'),
+      url('PTSerif-Caption.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('PTSerif-BoldItalic.woff2') format('woff2'),
+      url('PTSerif-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif Caption';
+  src: url('PTSerif-CaptionItalic.woff2') format('woff2'),
+      url('PTSerif-CaptionItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+

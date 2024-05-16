@@ -1,0 +1,168 @@
+.pass-change {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__pass-title {
+        margin-bottom: 60px;
+    }
+
+    &__wrapper {
+        max-width: 600px;
+        width: 100%;
+
+        &--feild {
+
+            label {
+                margin-bottom: 18px;
+                font-size: 20px;
+                color: $dark;
+                font-weight: $font-weight-regular;
+                font-family: $font-family-cera;
+            }
+
+            input {
+                margin-bottom:40px;
+                border: none;
+                background-color: $input-color;
+                height: 65px;
+                width: 100%;
+                font-size: 20px;
+                border-radius: 8px;
+
+            }
+            &:last-child{
+                input{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__btn{
+        .primary-btn{
+            width:244px;
+            padding-left: 57px;
+            margin-bottom: 50px;
+            svg{
+                margin-left: 58px;
+            }
+        }
+    }
+    
+
+}
+
+/////////////////////////////////////////////////
+// Media query 
+////////////////////////////////////////////////
+
+
+// for small devices (768px)
+@include media-breakpoint-down(md) {
+    .pass-change {
+       
+        &__title {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        &__input {
+            margin-bottom: 30px;
+
+            label {
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+
+// Media query (576px)
+
+@include media-breakpoint-down(sm) {
+    .pass-change {
+
+        .container{
+            max-width: 480px;
+        }
+
+        &__pass-title {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        &__wrapper {
+           
+            &--feild {
+                input {
+                    font-size: 15px;
+                    height: 50px;
+                    margin-bottom: 20px;
+                }
+
+                label {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    input {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            
+        }
+        &__btn{
+            .primary-btn{
+                width: 164px;
+                margin:30px 0;
+                padding-left:40px;
+                font-size: 13px;
+                align-items: center;
+                svg{
+                    margin-left: 13px;
+                }
+            }
+        }
+
+        &__input {
+            margin-bottom: 0;
+            input {
+                margin-bottom: 60px;
+            }
+
+        }
+    }
+}
+
+
+// Media query  (0 >)
+
+@include media-breakpoint-down(xs) {
+    .pass-change {
+
+        &__pass-title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        &__wrapper {
+          
+            &--feild {
+                input {
+                    margin-bottom: 20px;
+                    height: 40px;
+                }
+
+                &:last-child {
+                    input {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+     }
+  }

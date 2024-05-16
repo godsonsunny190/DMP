@@ -1,0 +1,283 @@
+.contactus {
+  .contact {
+    h2 {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    &__address {
+      h5 {
+        font-size: 30px;
+        font-weight: $font-weight-medium;
+        position: relative;
+        padding-bottom: 15px;
+        width: max-content;
+        margin-bottom: 18px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: #707070;
+          left: 0;
+          bottom: 0px;
+        }
+      }
+
+      div {
+        p {
+          &:last-child {
+            margin-bottom: 45px;
+            font-family: $font-family-cera;
+            max-width: 376px;
+            display: flex;
+            align-items: center;
+          }
+
+          &.textp {
+            position: relative;
+            left: 25px;
+            font-family: $font-family-cera;
+          }
+
+          &.textfont {
+            font-family: $font-family-cera;
+          }
+
+          svg {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    &__form {
+      p {
+        max-width: 830px;
+        margin-bottom: 45px;
+        font-family: $font-family-cera;
+      }
+
+      input {
+        margin-bottom: 35px;
+        width: 100%;
+        height: 60px;
+        border-radius: 8px;
+        border: 0;
+        background: #f1edec;
+        padding-left: 10px;
+
+        &::placeholder {
+          padding-left: 0px;
+          font-family: $font-family-cera;
+        }
+      }
+
+      textarea {
+        height: 170px;
+        width: 100%;
+        border-radius: 8px;
+        border: 0;
+        background: #f1edec;
+        outline: none;
+        padding-left: 10px;
+
+        &::placeholder {
+          padding-left: 0px;
+          font-family: Cera, sans-serif;
+        }
+      }
+
+      .btn__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 124px;
+
+        .primary-btn {
+          width: 244px;
+        }
+
+        .primary-btn {
+          padding: 12px 10px 12px 30px;
+          align-items: center;
+        }
+      }
+    }
+
+    .contact__mountain-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 80px;
+
+      img {
+        width: 243px;
+        height: auto;
+      }
+    }
+
+    #wpcf7-f221-o1 {
+      .primary-btn {
+        font-family: $font-family-gtsectra;
+        z-index: 9;
+        cursor: pointer;
+        margin-left: auto;
+
+        svg {
+          right: 10%;
+          position: absolute;
+          bottom: 31% !important;
+          z-index: 10;
+        }
+      }
+    }
+
+    #wpcf7-f221-o1:hover svg {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .map {
+    margin-bottom: 200px;
+    iframe {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+.btn__wrapper:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+a.primary-btn:focus-visible {
+  outline: none;
+}
+
+// ////////////////////////////////////////
+// Media Quries
+///////////////////////////////////////////
+
+@media (max-width: 1920px) {
+  .left-ps {
+    position: relative;
+    left: -170px;
+  }
+}
+
+@include media-breakpoint-down(xxl) {
+  .contactus .contact .contact__mountain-icon img {
+    width: 200px;
+  }
+
+  .contactus .contact .contact__address {
+    width: 35%;
+  }
+
+  .contactus .contact__address div p.textp {
+    left: 32px;
+  }
+
+  .contactus .contact__address div p {
+    font-size: 14px !important;
+  }
+
+  .contactus .contact__address div a {
+    font-size: 14px !important;
+  }
+
+  .left-ps {
+    position: relative;
+    left: 0px;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .contactus {
+    .contact {
+      .contact__address {
+        width: 100%;
+      }
+
+      .contact__wrapper {
+        flex-wrap: wrap;
+        gap: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .contactus .contact__form .btn__wrapper .primary-btn {
+    width: 244px;
+    padding: 12px 10px 12px 12px;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .contactus {
+    .contact {
+      .btn__wrapper {
+        margin-bottom: 80px !important;
+
+        .primary-btn {
+          width: 164px;
+        }
+      }
+
+      .contact__mountain-icon {
+        margin-bottom: 80px !important;
+        margin-top: 60px;
+
+        img {
+          width: 140px !important;
+          height: auto;
+        }
+      }
+    }
+
+    .map {
+      margin-bottom: 80px;
+
+      img {
+        height: 230px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// Media Quries (0 > 576px )
+@include media-breakpoint-down(xs) {
+  .contactus {
+    .container {
+      max-width: 100%;
+
+      .contact {
+        &__address {
+          h5 {
+            font-size: 20px;
+            padding-bottom: 5px;
+          }
+
+          div {
+            p {
+              &:last-child {
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+
+        .contact__mountain-icon {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
