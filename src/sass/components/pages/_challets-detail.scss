@@ -13,7 +13,7 @@
       background-position: center;
       margin: 0 auto;
       position: relative;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       mask-image: url(../images/rectangle.svg);
       mask-image: url(../images/rectangle.svg);
@@ -110,7 +110,7 @@
     }
 
     &__wrapper {
-      max-width: 575px;
+      max-width: 540px;
       width: 100%;
       gap: 70px;
 
@@ -172,6 +172,18 @@
   }
 }
 
+@media screen and (min-width:375px) and (max-width: 812px) and (orientation: landscape) {
+  .challets-detail .challets-sec__image {
+    mask-size: 177vmin !important;
+    height: 91vh !important;
+  }
+
+  .challets-detail .challets-sec__rate {
+    bottom: 5% !important;
+  }
+}
+
+
 @include media-breakpoint-down(xxl) {
   .challets-detail {
     .challets-sec {
@@ -192,7 +204,23 @@
       }
     }
 
+
     .features {
+      margin-top: 60px;
+
+      .features__wrapper--content {
+        img {
+          width: 57px;
+          height: 57px;
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: 17px;
+          text-align: left;
+        }
+      }
+
       &__desc {
         p {
           max-width: 520px;
@@ -208,10 +236,15 @@
       &__rate {
         bottom: 14%;
       }
+
+      &__image {
+        mask-size: 110vmin;
+      }
     }
 
     .features {
-      margin: top 40px;
+      margin-top: 50px;
+
       &__desc {
         p {
           width: 100%;
@@ -235,15 +268,13 @@
       margin-right: 30px;
 
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
 
     .swiper-button-next {
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
   }
@@ -268,14 +299,20 @@
           text-align: center;
         }
       }
+
+      &__image {
+        mask-size: 84vmin;
+      }
     }
 
+
+
     .nearby__wrapper__image {
-      margin-top: 50px;
+      margin-top: 20px;
     }
 
     .related {
-      margin: 70px 0;
+      margin: 30px 0;
 
       .related__list--item {
         width: 45%;
@@ -315,7 +352,12 @@
           margin-bottom: 50px;
         }
       }
+
+      &__desc p {
+        text-align: center;
+      }
     }
+
   }
 }
 
@@ -325,7 +367,14 @@
       &__rate {
         bottom: 113px;
       }
+
+
+      &__image {
+        mask-size: 84vmin;
+        height: 50vh;
+      }
     }
+
     .related__list--item {
       width: 100%;
       min-width: unset;
@@ -339,26 +388,30 @@
     .btn-wrapper__btn {
       max-width: 100% !important;
       width: 100% !important;
-      justify-content: space-between;
+      justify-content: space-around !important;
       position: absolute;
       right: 0;
       gap: 0;
 
-     a {
-        position: absolute;
-        left: 20px;
-      }
-
-      a {
-        position: absolute;
-        right: 20px;
-      }
     }
   }
 }
 
 @include media-breakpoint-down(xs) {
   .challets-detail {
+
+
+    .features {
+      &__wrapper {
+        justify-content: left;
+
+        &--content {
+          max-width: 100% !important;
+        }
+      }
+
+    }
+
     .challets-sec {
       &__image {
         height: 32vh;

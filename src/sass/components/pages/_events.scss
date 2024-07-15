@@ -67,7 +67,7 @@
       position: absolute;
       width: 421px;
       right: 10%;
-      top: 35%;
+      top: 44%;
     }
 
     &__group {
@@ -101,15 +101,17 @@
         flex-wrap: wrap;
         margin-top: 100px;
         margin-bottom: 100px;
-     
+
       }
     }
-    .loadmore{
-        .primary-btn{
-            margin: 50px auto;
-        }
+
+    .loadmore {
+      .primary-btn {
+        margin: 50px auto;
+      }
     }
   }
+
   .bottom-btn {
     .primary-btn {
       margin: 0 auto;
@@ -121,34 +123,56 @@
 ///////////////////////////////////////////
 // Media Quries
 ///////////////////////////////////////////
+@media screen and (min-width:375px) and (max-width: 812px) and (orientation: landscape) {
+  .events-sec .events__image {
+    height: 81vh !important;
+  }
+ 
+
+}
+
 @include media-breakpoint-down(xxl) {
   .events-sec {
     .events {
       .container {
         max-width: 1140px;
+
         .d-flex {
           margin-top: 0;
         }
       }
 
       &__jumping {
-        width: 300px;
-        right: 6%;
-        top: 30%;
+        width: 234px;
+        right: 4%;
+        top: 42rem;
       }
 
       &__group {
         left: 30%;
-        top: 60%;
-        width: 300px;
+        top: 83rem;
+        width: 268px;
       }
     }
+
     .events__image {
       max-width: 460px;
       height: 80vh;
     }
   }
 }
+
+@media (max-width:1440px) {
+  .events-sec {
+    .events {
+      &__group {
+        top: 69rem;
+      }
+    }
+  }
+}
+
+
 
 @include media-breakpoint-down(md) {
   .events-sec {
@@ -158,8 +182,10 @@
       }
 
       &__image {
-        width: 80vh;
+        height: 35vh;
+        margin-top: 30px;
       }
+
       .container {
         .d-flex {
           margin: 0;
@@ -180,7 +206,15 @@
           }
         }
       }
+
+      .flexbox {
+        flex-direction: column !important;
+      }
+
       .events__block {
+        margin-top: 30px;
+        order: 2;
+
         .gs_reveal {
           svg {
             width: 22px;
@@ -189,6 +223,7 @@
         }
       }
     }
+
     .bottom-btn {
       .primary-btn {
         margin: 0 auto;
@@ -203,7 +238,7 @@
   .events-sec {
     .events {
       &__image {
-        height: 50vh;
+        height: 40vh;
       }
 
       .container {

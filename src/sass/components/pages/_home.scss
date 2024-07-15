@@ -1,4 +1,4 @@
-section {                                      
+section {
   position: relative;
 }
 
@@ -107,6 +107,24 @@ section {
     }
   }
 
+
+  .swiper-paginations1 {
+    position: absolute;
+    z-index: 999;
+    bottom: -42px;
+    left: 44%;
+
+    .swiper-pagination-current1 {
+      font-size: 25px;
+      color: #51c4cc;
+    }
+
+    .swiper-pagination-total {
+      font-size: 15px;
+      color: #384133;
+    }
+  }
+
   .gallery {
     margin-top: 200px;
     justify-content: space-between;
@@ -120,7 +138,7 @@ section {
 
     #dp-dots {
       position: absolute;
-      bottom: 0;
+      bottom: 7px;
       left: 52%;
       width: 50%;
     }
@@ -324,8 +342,10 @@ section {
 
       .facilities__icon--swing {
         position: absolute;
+        margin-top: 23px;
       }
     }
+
 
     .d-flex {
       align-items: center;
@@ -350,6 +370,8 @@ section {
         position: absolute;
         left: 50%;
       }
+
+
     }
 
     &__block {
@@ -365,6 +387,15 @@ section {
       &--link {
         padding-top: 64px;
       }
+
+      .small_icons {
+        position: absolute;
+        right: 40%;
+        width: 50px;
+        margin-top: 99px;
+      }
+
+
     }
 
     &__image {
@@ -469,7 +500,7 @@ section {
         margin-top: 150px;
       }
 
-      & > .primary-btn {
+      &>.primary-btn {
         margin: 0 auto;
         margin-top: 100px;
       }
@@ -693,8 +724,7 @@ section {
       background-size: contain;
 
       &:hover {
-        filter: invert(71%) sepia(98%) saturate(278%) hue-rotate(129deg)
-          brightness(86%) contrast(89%);
+        filter: invert(71%) sepia(98%) saturate(278%) hue-rotate(129deg) brightness(86%) contrast(89%);
       }
     }
 
@@ -706,8 +736,7 @@ section {
       background-size: contain;
 
       &:hover {
-        filter: invert(71%) sepia(98%) saturate(278%) hue-rotate(129deg)
-          brightness(86%) contrast(89%);
+        filter: invert(71%) sepia(98%) saturate(278%) hue-rotate(129deg) brightness(86%) contrast(89%);
       }
     }
 
@@ -910,6 +939,62 @@ section {
   // }
 }
 
+// ONLY FOR LANDSCAP 
+
+@media screen and (min-width:375px) and (max-width: 812px) and (orientation: landscape) {
+  .home {
+    .activities {
+      &__block p {
+        text-align: center;
+      }
+
+      &__image {
+        margin: 30px 0 !important;
+        height: 80vh !important;
+      }
+    }
+
+    .facilities {
+      padding-top: 250px !important;
+    }
+
+    .swiper-paginations1 {
+      bottom: -237px !important;
+      left: 43% !important;
+    }
+
+    .celebrate {
+      &__image {
+        margin-top: 30px !important;
+        height: 80vh !important;
+      }
+    }
+
+    .dining-events {
+
+      .dining p {
+        text-align: center !important;
+      }
+
+      .event .event__image {
+        height: 81vh !important;
+      }
+
+      .dining__image {
+        height: 81vh !important;
+      }
+    }
+
+    .celebrate__icon.mob-icon {
+      top: 43% !important;
+      right: 20px !important;
+    }
+  }
+}
+
+// ONLY FOR LANDSCAP 
+
+
 @include media-breakpoint-down(xxxl) {
   .home .package .swiper-slide:after {
     width: 300px;
@@ -967,6 +1052,18 @@ section {
         max-width: 550px;
         max-height: 471px;
       }
+
+      .small_icons:first-child {
+        position: absolute;
+        width: 50px;
+        right: 26%;
+
+        &:nth-of-type(1) {
+          position: absolute;
+          left: 40%;
+          width: 50px;
+        }
+      }
     }
 
     .activities {
@@ -1023,7 +1120,7 @@ section {
     }
 
     .celebrate {
-      margin-top: 100px;
+      margin-top: 50px;
 
       p {
         font-size: 15px;
@@ -1040,9 +1137,16 @@ section {
     }
 
     .gallery {
+
       &__block {
+        margin-top: -200px;
+
         h2 {
           font-size: 65px;
+        }
+
+        p {
+          margin-bottom: 40px;
         }
       }
 
@@ -1053,7 +1157,7 @@ section {
       }
 
       #dp-dots {
-        bottom: 15%;
+        bottom: 21%;
       }
 
       &__slider {
@@ -1102,6 +1206,27 @@ section {
 
     .package {
       margin-top: 100px;
+
+      .package-btn {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .primary-btn {
+        margin: 0px auto;
+        margin-top: 0;
+      }
+
+      .package_card_button {
+        margin: 50px auto;
+      }
+
+      .package-cta {
+        margin-bottom: 0 !important;
+      }
 
       &__image {
         max-width: 350px;
@@ -1202,11 +1327,16 @@ section {
       }
 
       p {
-        font-size: 18px;
+        font-size: 19px;
       }
 
       h6 {
         margin-bottom: 15px;
+        font-size: 15px;
+      }
+
+      .news__btn--link {
+        font-size: 15px;
       }
 
       p {
@@ -1259,6 +1389,7 @@ section {
 
       &__block {
         width: 100%;
+        margin-top: 0;
       }
     }
 
@@ -1270,6 +1401,12 @@ section {
   .news .primary-btn {
     font-size: 15px;
     line-height: 1.6;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .home .swiper-paginations1 {
+    display: none;
   }
 }
 
@@ -1290,15 +1427,27 @@ section {
     }
 
     .celebrate {
+      margin-top: 40px;
+
       &__image {
         max-width: 350px;
+        height: 35vh;
       }
 
       &__icon {
         &.mob-icon {
           animation: none;
+          right: 55px;
+          left: unset;
         }
       }
+    }
+
+    .swiper-paginations1 {
+      position: absolute;
+      z-index: 999;
+      bottom: -72px;
+      left: 44%;
     }
 
     .gallery {
@@ -1326,22 +1475,25 @@ section {
         left: 33%;
         bottom: 9px !important;
       }
+
       .swiper-button-wrapper {
+
         // position: relative;
         div#dp-prev {
           position: absolute;
-          bottom: -12%;
+          bottom: -15%;
           background-image: url(../images/right.svg);
           background-repeat: no-repeat;
           width: 34px;
           height: 34px;
           background-size: contain;
         }
+
         div#dp-next {
           position: absolute;
           background-image: url(../images/left.svg);
           left: 41%;
-          bottom: -12%;
+          bottom: -15%;
           background-repeat: no-repeat;
           width: 34px;
           height: 34px;
@@ -1355,43 +1507,90 @@ section {
     }
 
     .facilities {
-      padding-top: 150px;
+      padding-top: 80px;
       margin-top: 80px;
+
+      .d-flex {
+        &:nth-of-type(2) {
+          border-bottom: 1px solid #d9d4d2;
+          border-top: 1px solid #d9d4d2;
+          padding-bottom: 30px;
+        }
+
+        &:nth-of-type(3) {
+          border-bottom: 1px solid #d9d4d2;
+          padding-bottom: 30px;
+        }
+      }
 
       &__icon {
         &--swing {
-          right: 0;
-          top: -47px;
+          right: 13%;
+          top: -9px;
           animation: none;
+          max-width: 230px;
+
+
+          &:nth-of-type(2) {
+            display: none !important;
+          }
+
+          &:nth-of-type(3) {
+            display: none !important;
+          }
         }
       }
 
       &__block {
         order: 2;
+
+        p {
+          text-align: center;
+        }
+
+        h3 {
+          justify-content: center;
+        }
       }
 
       .d-flex {
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 0px;
+        padding-bottom: 30px;
+      }
+
+      .small_icons {
+        display: none !important;
+      }
+
+      .primary-btn {
+        margin: 0 auto;
         margin-top: 35px;
       }
+
     }
 
     .activities {
       padding-top: 0;
+      margin-top: 150px;
+
 
       &__icon {
         &--walk {
-          width: 200px;
-          display: block;
-          top: 55px;
+          top: -5%;
+          width: 150px;
+          left: 30%;
+          display: block !important;
           animation: none;
         }
+
       }
 
       &__block {
         width: 100%;
         order: 3;
+        padding-bottom: 30px;
 
         p {
           margin: 15px auto;
@@ -1409,16 +1608,28 @@ section {
       .container .d-flex {
         flex-wrap: wrap;
         justify-content: center;
+
+        &:nth-of-type(2) {
+          border-top: 1px solid #d9d4d2;
+          border-bottom: 1px solid #d9d4d2;
+        }
+
+        // &:nth-of-type(3) {
+        //   border-bottom: 1px solid #d9d4d2;
+        // }
+
       }
 
       &__image {
         order: 2;
         max-width: 350px;
+        height: 40vh;
       }
 
       &__icon--game {
         position: absolute;
-        bottom: -215px;
+        bottom: -8%;
+        left: 21%;
         animation: unset;
         z-index: -1;
         max-width: 222px;
@@ -1426,25 +1637,95 @@ section {
     }
 
     .dining-events {
+      .event {
+        .event__image {
+          height: 35vh;
+        }
+      }
+
+      .dining__image {
+        height: 35vh;
+      }
+
       &__icon {
         &--large {
           animation: none;
+          width: 256px;
+          height: 196px;
+          top: -122px;
+          position: absolute;
+          right: 2%;
+
         }
       }
     }
+
 
     .map {
       margin-top: 80px;
       max-width: 100%;
       overflow-x: auto;
+
+      h2 {
+        margin-top: 150px;
+      }
     }
 
     .package {
-      margin-top: 80px;
+      margin-top: 40px;
+
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      .swiper-button-wrapper {
+        max-width: 190px;
+        margin-left: 0;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 34px;
+          margin-right: 15px;
+        }
+
+        .swiper-pagination.swiper-pagination-fraction {
+          top: -58px;
+          left: -118px;
+          position: relative;
+        }
+
+        .swiper-pagination1.swiper-pagination-fraction {
+          top: -58px;
+          left: -86px;
+          position: relative;
+        }
+      }
+
+    }
+
+    .sea-packages {
+
+      .package-btn {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        margin-bottom: -25px !important;
+        margin: auto;
+
+      }
+    }
+
+    .event {
+      border-bottom: 1px solid #d9d4d2;
     }
 
     .news {
       .package {
+        .button-for-mob {
+          margin-top: 40px;
+        }
+
         .swiper-slide {
           .primary-btn {
             &::after {
@@ -1493,6 +1774,7 @@ section {
         }
       }
     }
+
   }
 }
 
@@ -1504,19 +1786,14 @@ section {
       }
 
       &__image {
-        max-height: 350px;
+        max-height: 243px;
+        margin-top: 20px;
       }
     }
 
     .celebrate {
-      margin-top: 40px;
-
-      &__image {
-        height: 66vh;
-      }
-
       p {
-        margin-top: 150px;
+        margin-top: 100px;
       }
 
       &__icon {
@@ -1529,15 +1806,26 @@ section {
           max-width: 176px;
         }
       }
+
+      &__image {
+        height: 50vh;
+      }
+    }
+
+    .swiper-paginations1 {
+      bottom: -67px;
+      left: 39%;
     }
 
     .gallery {
       margin-top: 50px;
       height: 500px;
+
       .swiper-button-wrapper div#dp-next {
         bottom: -54%;
         z-index: 99;
       }
+
       .swiper-button-wrapper div#dp-prev {
         bottom: -54%;
         z-index: 99;
@@ -1574,7 +1862,7 @@ section {
 
       #gallery-slide .gallery_item:nth-of-type(2) {
         right: unset;
-        left: 30%;
+        left: 33%;
 
         .gallery-img {
           width: 250px;
@@ -1583,8 +1871,7 @@ section {
       }
 
       #gallery-slide .gallery_item:nth-of-type(3) {
-        right: 76px;
-        left: 33%;
+        left: 36%;
 
         .gallery-img {
           width: 229px;
@@ -1608,8 +1895,7 @@ section {
     }
 
     .facilities {
-      padding-top: 150px;
-      margin-top: 150px;
+
 
       &__icon {
         &--swing {
@@ -1618,23 +1904,20 @@ section {
       }
 
       .d-flex {
-        margin-top: 50px;
+        margin-top: 0px;
       }
 
-      .primary-btn {
-        margin: 0 auto;
-        margin-top: 35px;
-      }
+
     }
 
     h2 {
-      margin-bottom: 50px;
+      margin-bottom: 25px;
     }
 
     .activities {
       .container {
         .d-flex {
-          margin-top: 50px;
+          padding-top: 40px;
         }
 
         .primary-btn {
@@ -1657,15 +1940,32 @@ section {
 
       &__icon--game {
         max-width: 173px;
-        bottom: -20;
+        bottom: -5%;
+      }
+
+      &__image {
+        height: 50vh;
+      }
+
+      &__icon {
+        &--walk {
+          top: -4%;
+        }
       }
     }
+
+    .sea-packages h2 {
+      margin-bottom: 0px;
+    }
+
+
 
     .map {
       margin-top: 50px;
 
       h2 {
         margin-bottom: 0;
+        margin-top: 80px;
       }
     }
 
@@ -1679,12 +1979,14 @@ section {
       }
 
       .event {
+
         .event__image {
           margin: 0 auto;
           margin-top: 35px;
         }
+
         p {
-          text-align: left;
+          text-align: center;
         }
       }
 
@@ -1711,6 +2013,7 @@ section {
         display: none !important;
         background: #f9f4f200 !important;
       }
+
       .image-container .image-flexbox .news__img {
         height: 100%;
       }
@@ -1723,13 +2026,17 @@ section {
     .celebrate {
       &__icon {
         &.mob-icon {
-          top: 36%;
+          top: 44%;
+
         }
       }
 
       .celebrate__image {
         max-width: 235px;
-        height: 50vh;
+      }
+
+      p {
+        margin-top: 0px;
       }
     }
 
@@ -1746,46 +2053,33 @@ section {
     }
 
     .facilities {
-      .d-flex {
-        &:nth-of-type(2) {
-          border-top: 1px solid #384133;
-          border-bottom: 1px solid #384133;
-          padding-bottom: 45px;
-        }
-
-        &:nth-of-type(3) {
-          border-bottom: 1px solid #384133;
-          padding-bottom: 45px;
-        }
-      }
-      padding-top: 80px;
-      margin-top: 80px;
 
       h2 {
-        text-align: left !important;
+        text-align: center !important;
       }
 
       &__image {
-        height: 45vh;
+        height: 33vh;
+        margin-top: 20px;
       }
 
       &__icon {
         &--swing {
           max-width: 119px;
-          right: 173px;
+          right: 20%;
           max-width: 119px;
-          top: -61%;
+          top: -10%;
         }
+
+
       }
 
       &__block {
-        h3 {
-          justify-content: center;
-        }
+
 
         .primary-btn {
-          padding: 7px 10px 16px 14px;
-          width: 135px;
+          padding: 7px 7px 16px 12px;
+          width: 146px;
           height: 42px;
 
           &::after {
@@ -1802,14 +2096,14 @@ section {
       .event {
         .event__image {
           max-width: 235px;
-          height: 46vh;
+          height: 34vh;
           margin: 20px 0;
         }
       }
 
       .dining__image {
         max-width: 235px;
-        height: 46vh;
+        height: 34vh;
         margin: 20px auto;
       }
 
@@ -1817,7 +2111,7 @@ section {
         &--large {
           width: 136px;
           height: 110px;
-          top: -6%;
+          top: -7%;
           right: 0;
         }
       }
@@ -1836,23 +2130,11 @@ section {
     }
 
     .package {
-      margin-top: 30px;
+      margin-top: 0px;
 
-      .swiper-button-wrapper {
-        max-width: 190px;
-        margin-left: 0;
 
-        .swiper-button-prev,
-        .swiper-button-next {
-          width: 34px;
-          margin-right: 15px;
-        }
-
-        .swiper-pagination-fraction {
-          top: -58px;
-          left: -85px;
-          position: relative;
-        }
+      .swiper-button-wrapper .swiper-pagination-fraction {
+        left: -84px !important;
       }
 
       .swiper-slide {
@@ -1890,8 +2172,14 @@ section {
       }
     }
 
+
+
     .news {
       margin-bottom: 40px;
+
+      p {
+        text-align: left;
+      }
 
       .package {
         .swiper-slide {
@@ -1912,7 +2200,7 @@ section {
         .swiper-pagination {
           text-align: left;
           margin-top: 21px;
-          margin-left: 14px;
+          margin-left: 0;
         }
       }
 
@@ -1922,14 +2210,15 @@ section {
     }
 
     .activities {
-      margin-top: 150px;
 
       &__icon {
+
         &--walk {
           top: -136px;
           width: 186px;
           left: 30px;
           display: block !important;
+          animation: none;
         }
 
         &--game {
@@ -1942,13 +2231,17 @@ section {
 
       &__block {
         h3 {
-          justify-content: left !important;
+          justify-content: center !important;
+        }
+
+        p {
+          text-align: center;
         }
       }
 
       .container {
         .primary-btn {
-          margin-left: 0;
+
           margin-top: 25px;
           width: 145px;
           height: 42px;
@@ -1960,6 +2253,8 @@ section {
         }
 
         .view-more {
+          padding-top: 0 !important;
+
           .primary-btn {
             border: none;
             font-size: 14px;
@@ -1977,16 +2272,7 @@ section {
           }
         }
 
-        .d-flex {
-          &:nth-of-type(2) {
-            border-top: 1px solid #384133;
-            border-bottom: 1px solid #384133;
-          }
 
-          &:nth-of-type(3) {
-            border-bottom: 1px solid #384133;
-          }
-        }
       }
 
       h2 {
@@ -1999,8 +2285,7 @@ section {
     }
 
     .activities__image {
-      max-width: 235px;
-      height: 41vh;
+      height: 30vh;
     }
 
     &__block {
@@ -2017,12 +2302,19 @@ section {
       }
     }
 
+    .swiper-paginations1 {
+      bottom: -77px;
+      left: 37%;
+    }
+
     .gallery {
       margin-top: 50px;
+
       .swiper-button-wrapper div#dp-next {
         left: 33%;
         bottom: -23%;
       }
+
       .swiper-button-wrapper div#dp-prev {
         bottom: -23%;
       }
@@ -2068,14 +2360,7 @@ section {
       }
     }
 
-    .map {
-      h2 {
-        margin-top: 150px;
-      }
-    }
-
     .event {
-      border-bottom: 1px solid #384133;
       padding-bottom: 45px;
     }
 

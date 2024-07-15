@@ -64,8 +64,8 @@
       margin-top: 130px;
 
       &:last-child {
-        border-bottom: 1px solid #384133;
-        border-top: 1px solid #384133;
+        border-bottom: 1px solid #d9d4d2;
+        border-top: 1px solid #d9d4d2;
         padding: 100px 0;
       }
 
@@ -146,9 +146,25 @@
   }
 }
 
+@media screen and (min-width:375px) and (max-width: 812px) and (orientation: landscape) {
+  .package {
+    margin-top: 30px;
+  }
+}
+
 @media (max-width: 1699px) {
   .caravan-main {
     .features__section {
+
+      .features__wrapper {
+        &--content {
+          p {
+            text-align: left;
+            font-size: 17px;
+          }
+        }
+      }
+
       .features__desc p {
         max-width: 400px;
       }
@@ -164,52 +180,43 @@
   }
 }
 
-// @media (max-width: 1365px) {
-//     .caravan-main {
-//         .features__section {
-
-//         }
-//     }
-// }
-// @media (max-width: 1168px) {
-//     .features__desc {
-//         width: 100%!important;
-//     }
-// }
 @media (max-width: 1166px) {
   .caravan-main {
     .features__section {
+      .features__desc {
+        width: 100%;
+      }
+
       .features__desc p {
         max-width: 100%;
         width: 100%;
       }
+
       .feature-include {
         width: 100%;
       }
+
       .features__wrapper {
         max-width: 100%;
       }
+
       .caravan-parking__rate {
         margin: 0 auto;
       }
+
       .features__btn {
         margin-bottom: 50px;
       }
     }
   }
 }
-// @media (max-width: 1168px) {
-//   .caravan-main {
-//     .features__desc {
-//       width: 100% !important;
-//     }
-//   }
-// }
+
 @include media-breakpoint-down(xl) {
   .caravan-main {
     .features__desc {
       width: 46%;
     }
+
     .features__desc p {
       max-width: 400px;
     }
@@ -277,7 +284,7 @@
     .features__section {
       .features {
         &__wrapper {
-          justify-content: center;
+          justify-content: left;
           gap: 30px;
 
           &--content {
@@ -303,6 +310,7 @@
         }
       }
     }
+
     .nearby__wrapper__image {
       width: 100vw;
       height: 100vh;
@@ -314,6 +322,7 @@
       background-position: 50%;
       background-repeat: no-repeat;
     }
+
     .package h4 {
       text-align: center;
       font-size: 17px;
@@ -321,25 +330,29 @@
       margin-top: 15px;
       margin-bottom: 40px;
     }
+
     .swiper-button-prev {
       margin-right: 30px;
+
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
+
     .swiper-button-next {
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
+
     .swiper-button-wrapper {
       justify-content: center;
     }
+
     .features:last-child {
       padding: 40px 0 !important;
     }
+
     .features {
       margin-top: 30px !important;
     }
@@ -362,9 +375,22 @@
           height: 31vh;
         }
       }
+
       .features:last-child {
         padding: 40px 0;
       }
+    }
+
+    .features {
+
+      &__wrapper {
+        justify-content: left;
+
+        &--content {
+          max-width: 100% !important;
+        }
+      }
+
     }
   }
 }

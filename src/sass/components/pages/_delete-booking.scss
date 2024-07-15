@@ -1,51 +1,56 @@
-
-.dt-booking{
+.dt-booking {
     margin-bottom: 76px;
-    .modal{
-        top: unset;
-    }
-    &__modal{
+
+    &__modal {
         max-width: 650px;
         width: 100%;
         min-height: 267px;
-        background-color:#F9F4F2;
+        background-color: #F9F4F2;
         margin: 0 auto;
         border-radius: 10px;
-        .close-btn{
+
+        .close-btn {
             border: none;
             background: transparent;
             display: flex;
             align-items: center;
-            svg{
+
+            svg {
                 width: 23px;
                 height: 23px;
             }
         }
-        .modal-content{
+
+        .modal-content {
             padding: 30px;
         }
-        .modal-header{
+
+        .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom:none;
+            border-bottom: none;
         }
-        .modal-title{
+
+        .modal-title {
             font-size: 30px;
-            font-weight:$font-weight-regular;
+            font-weight: $font-weight-regular;
             font-family: $font-family-gtsectra;
         }
-        .modal-message{
+
+        .modal-message {
             font-size: 20px;
             color: #384133;
             margin: 28px 0 40px 0;
         }
-        .modal-footer{
+
+        .modal-footer {
             display: flex;
             justify-content: flex-end;
             gap: 40px;
             border-top: none;
-            .btn-primary{
+
+            .btn-primary {
                 border: 1px solid $blue;
                 border-radius: 25px;
                 width: 120px;
@@ -54,9 +59,10 @@
                 font-family: $font-family-cera;
                 font-weight: $font-weight-regular;
                 color: #384133;
-                
+
             }
-            .btn-secondary{
+
+            .btn-secondary {
                 border: none;
                 background: transparent;
                 font-size: 20px;
@@ -67,59 +73,67 @@
         }
 
     }
-   
+
 }
 
 // //////////////////////////////////////// 
 // Media Quries 
 ///////////////////////////////////////////
-@include media-breakpoint-down(xxl){
-    .dt-booking__modal{
+@include media-breakpoint-down(xxl) {
+    .dt-booking__modal {
         max-width: 555px;
         min-height: 228px;
     }
-    .dt-booking__modal .modal-message{
+
+    .dt-booking__modal .modal-message {
         margin: 4px 0 9px;
     }
 }
 
 // Media Quries (0 >)
-@include media-breakpoint-down(xs){
-    .dt-booking{
-        &__modal{
+@include media-breakpoint-down(xs) {
+    .dt-booking {
+        &__modal {
             min-height: fit-content;
             width: calc(100% - 30px);
-            .close-btn{
-                svg{
+
+            .close-btn {
+                svg {
                     width: 15px;
                     height: 15px;
                 }
             }
-            
-        .container{
-            max-width: 480px;
-        }
-        .modal-content{
-            padding: 20px;
-         }
-         .modal-title{
-            font-size: 20px;
-        }
-        .modal-message{
-            margin: 15px 0 20px 0;
-            font-size: 15px;
-            line-height: 1.5;
-        }
-        .modal-footer{
-            gap: 20px;
-            .btn-primary{
-                width: 68px;
-                height: 34px;
+
+            .container {
+                max-width: 480px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .modal-title {
+                font-size: 20px;
+            }
+
+            .modal-message {
+                margin: 15px 0 20px 0;
                 font-size: 15px;
-              }
-              .btn-secondary{
-                font-size: 15px;
-              }
+                line-height: 1.5;
+            }
+
+            .modal-footer {
+                gap: 20px;
+
+                .btn-primary {
+                    width: 68px;
+                    height: 34px;
+                    font-size: 15px;
+                }
+
+                .btn-secondary {
+                    font-size: 15px;
+                }
             }
         }
     }

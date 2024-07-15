@@ -30,7 +30,7 @@
                         transform="translate(1147 131)" fill="#384133" />
                 </g>
             </g>
-        </g>
+        </g> 
     </svg>
     <section>
         <div class="container d-flex banner">
@@ -160,12 +160,18 @@
                     <li data-class="2" class=""></li>
                     <li data-class="3" class=""></li>
                 </ul>
+
                 <div class="swiper-pagination"></div>
                 <div class="d-flex swiper-button-wrapper">
                     <div class="swiper-button-next-unique" id="dp-next"></div>
                     <div class="swiper-button-prev-unique" id="dp-prev"></div>
 
                 </div>
+                <div class="swiper-paginations1">
+                    <span class="swiper-pagination-current1">01</span> /
+                    <span class="swiper-pagination-total">03</span>
+                </div>
+             
             </div>
 
             <img class="gallery__icon--resort icon" src="images/resort.png" alt="">
@@ -851,9 +857,6 @@
                     </svg>
                 </a>
             </div>
-
-
-
 
             <div class="swiper packageSwiper image-container">
                 <div class="swiper-wrapper">

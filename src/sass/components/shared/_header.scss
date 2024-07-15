@@ -201,7 +201,7 @@ nav {
     .hamburger {
       position: fixed;
       right: 45px;
-      bottom: 45%;
+      top: 60px;
     }
 
     span {
@@ -213,7 +213,7 @@ nav {
 
 .socialMedia {
   position: fixed;
-  bottom: 10%;
+  top: 36%;
   right: 34px;
   max-width: 30px;
   width: 100%;
@@ -368,9 +368,7 @@ nav {
 }
 
 @include media-breakpoint-down(xxxl) {
-  .socialMedia {
-    bottom: 5%;
-  }
+
 
   .menu__item {
     .navigation {
@@ -404,7 +402,6 @@ nav {
 
         .hamburger {
           right: 31px;
-          bottom: 57%;
         }
 
         &__item {
@@ -426,6 +423,7 @@ nav {
       line-height: 1.6;
       gap: 35px;
     }
+
     .menu__item .navigation .d-flex {
       margin: 30px auto;
     }
@@ -433,15 +431,18 @@ nav {
 
   @include media-breakpoint-down(lg) {
     .header {
+
       .my-account,
       .book-now-btn {
         display: none;
       }
+
       .mob-primary-btn {
         .primary-btn {
           margin-top: 0;
         }
       }
+
       &__logo {
         width: 180px;
         height: auto;
@@ -472,7 +473,7 @@ nav {
       .navigation {
         padding: 30px 0;
         height: 100%;
-        overflow: auto;
+
 
         h2 {
           margin-bottom: 15px;
@@ -551,6 +552,7 @@ nav {
         margin: 0 10px;
       }
     }
+
     .header .mob-head-sec {
       width: 100%;
       justify-content: space-between;
@@ -577,15 +579,21 @@ nav {
       width: 30px;
       top: 20px;
     }
+
     .header__menu-wrapper {
       &--dropdown {
         margin-right: 42px;
       }
     }
 
+    .menu__item .navigation {
+      overflow: auto;
+    }
+
     .menu__item img {
       top: 65% !important;
     }
+
     .header .mob-head-sec {
       margin: 0 50px;
       margin-top: 12px;
@@ -611,6 +619,7 @@ nav {
 
     .header__menu-wrapper {
       margin-right: 51px;
+
       &--dropdown {
         margin-right: 0;
       }

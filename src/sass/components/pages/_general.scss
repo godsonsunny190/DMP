@@ -105,6 +105,7 @@
           padding-left: 40px;
           position: relative;
           font-family: $font-family-cera;
+          width: 36%;
 
           &:after {
             content: "";
@@ -279,7 +280,7 @@
     }
 
     .landmarks__image {
-      max-width: 450px;
+      max-width: 550px;
       height: 60vh;
     }
 
@@ -321,9 +322,11 @@
   .general-info h2 {
     margin-bottom: 30px;
   }
+
   .general-info .landmarks__image {
-    max-width: 800px;
+    max-width: 100%;
   }
+
   .general-info .landmarks__image {
     height: 70vh;
   }
@@ -352,16 +355,20 @@
         justify-content: center !important;
         margin-bottom: 0;
         flex-wrap: wrap;
+        border-bottom: 1px solid #d9d4d2;
+        padding-top: 15px;
 
         &__block {
           order: 2;
           margin-bottom: 20px !important;
-          margin-top: 20px;
+          margin-top: 25px;
 
           h3 {
             font-size: 40px;
           }
         }
+
+
       }
 
       &__dibba {
@@ -400,6 +407,8 @@
       text-align: center;
       font-size: 17px;
       line-height: 25px;
+      margin-top: 30px;
+      margin-bottom: 9px;
     }
 
     .swiper-button-wrapper {
@@ -411,15 +420,13 @@
       margin-right: 15px;
 
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
 
     .swiper-button-next {
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
 
@@ -438,8 +445,9 @@
     }
 
     .general__dibba__mountain-icon img {
-      bottom: -6%;
+      bottom: -7%;
       width: 130px;
+      left: 42%;
     }
 
     .nearby {
@@ -453,6 +461,7 @@
           margin-bottom: 0;
         }
       }
+
       &__mountain-icon {
         margin: 34px auto;
       }
@@ -481,10 +490,19 @@
         }
       }
     }
+
     .landmarks {
       &__block {
         ul {
           margin-bottom: 30px;
+
+          li {
+            width: 100%;
+
+            p {
+              text-align: left;
+            }
+          }
         }
       }
     }
@@ -496,13 +514,16 @@
     .general__wrapper__block p {
       text-align: left;
     }
+
     .nearby__mountain-icon {
       max-width: 239px;
     }
+
     .general__dibba__mountain-icon img {
       width: 105px;
       bottom: -5%;
     }
+
     .landmarks {
       &__image {
         height: 38vh;

@@ -71,11 +71,13 @@
       span.page-numbers.current {
         border-radius: 0;
       }
+
       span.page-numbers.current:first-child {
-        border-radius: 10px 0px 0px 10px;
+        border-radius: 8px 0px 0px 8px;
       }
+
       span.page-numbers.current:last-child {
-        border-radius: 0px 10px 10px 0px;
+        border-radius: 0px 8px 8px 0px;
         border-right: none;
       }
     }
@@ -126,9 +128,11 @@
         }
       }
     }
+
     .listing__list--item h6 {
       margin-top: 18px;
     }
+
     .listing__list--item img {
       max-height: 265px;
     }
@@ -202,10 +206,12 @@
     width: 100%;
     min-width: unset;
   }
+
   .listing-wrapper .listing__list--item img {
     max-height: 350px;
   }
 }
+
 @include media-breakpoint-down(xs) {
   .listing-wrapper .listing__list--item img {
     max-height: 230px;

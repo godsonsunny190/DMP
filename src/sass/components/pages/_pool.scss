@@ -123,7 +123,7 @@
       }
 
       &__package {
-        font-family: "GT Sectra Book";
+        font-family: $font-family-cera;
         width: 160px;
         height: 160px;
         background: #384133;
@@ -235,7 +235,16 @@
       }
     }
 
+
     .rate-timing {
+      .rate__package {
+        width: 140px;
+        height: 140px;
+        text-align: center;
+        padding: 34px 25px;
+        margin-right: 55px;
+      }
+
       .rate__description {
         ul li {
           &::after {
@@ -244,6 +253,7 @@
         }
       }
     }
+
     .offers__description {
       ul li {
         &::after {
@@ -261,7 +271,7 @@
     }
 
     .rate-timing .rate__description {
-      font-family: Cera, sans-serif;
+
       max-width: 700px;
     }
 
@@ -313,7 +323,6 @@
     }
 
     .rate-timing .rate__description {
-      font-family: Cera, sans-serif;
       max-width: 500px;
     }
 
@@ -343,11 +352,16 @@
       margin-bottom: 50px;
 
       .detail__image {
-        width: 100vw;
-        height: 100vh;
+        width: 70vw;
+        height: 40vh;
         max-width: 656px;
         max-height: 500px;
       }
+
+      .detail {
+        margin-top: 50px;
+      }
+
     }
 
     .rate {
@@ -381,15 +395,13 @@
       margin-right: 30px;
 
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
 
     .swiper-button-next {
       &:hover {
-        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg)
-          brightness(90%) contrast(86%);
+        filter: invert(75%) sepia(20%) saturate(907%) hue-rotate(135deg) brightness(90%) contrast(86%);
       }
     }
 
@@ -432,12 +444,30 @@
           margin: 0 auto;
           margin-top: 35px;
         }
+
+      }
+
+      .detail__block__btn-wrapper__btn {
+        width: 100%;
+        max-width: 100%;
+
+
+
+        // a {
+        //   &:last-child {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: flex-end;
+        //     margin-left: auto;
+        //   }
+        // }
       }
 
       .detail {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+        margin-top: 0;
 
         h3 {
           justify-content: center;
@@ -447,6 +477,7 @@
       .detail__image {
         max-height: 400px;
       }
+
       .detail__block {
         margin-top: 25px;
       }
@@ -515,6 +546,7 @@
     .rate-timing .rate__description {
       max-width: unset;
     }
+
     .details .rate-timing .rate h3 {
       justify-content: center;
     }
@@ -536,6 +568,7 @@
       bottom: 6px;
       height: 13px;
     }
+
     .rate-timing .rate h3 {
       justify-content: center;
     }
@@ -545,16 +578,23 @@
       justify-content: center;
     }
 
+    .details-section {
+      margin-bottom: 20px;
+    }
+
     .details-section .detail__block__btn-wrapper {
       flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     .details-section .detail__image {
       max-height: 300px;
     }
+
     .details-section .detail__block__btn-wrapper__btn {
       max-width: 100%;
       width: 100%;
+      padding: 12px 10px;
     }
   }
 }

@@ -14,7 +14,16 @@ html {
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
 // TODO: remove in v5
 // stylelint-disable-next-line selector-list-comma-newline-after
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }
 
@@ -69,32 +78,42 @@ hr {
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 // margin for easier control within type scales as it avoids margin collapsing.
 // stylelint-disable-next-line selector-list-comma-newline-after
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: $line-height-small;
 }
-h6{
+
+h6 {
   font-size: 17px;
   font-weight: $font-weight-bold;
- 
+
 }
+
 h2 {
   font-size: 75px;
   color: $grey;
   font-weight: $font-weight-light;
 }
-h3{
+
+h3 {
   font-size: 55px;
   font-weight: $font-weight-light;
   display: flex;
   align-items: flex-end;
   line-height: 1;
   padding-bottom: 20px;
-  svg{
-    margin-left: 20px; 
+
+  svg {
+    margin-left: 20px;
   }
 }
+
 // Reset margins on paragraphs
 //
 // Similarly, the top margin on `<p>`s get reset. However, we also reset the
@@ -116,7 +135,8 @@ p {
 // 5. Prevent the text-decoration to be skipped.
 
 abbr[title],
-abbr[data-original-title] { // 1
+abbr[data-original-title] {
+  // 1
   text-decoration: underline; // 2
   text-decoration: underline dotted; // 2
   cursor: help; // 3
@@ -173,8 +193,13 @@ sup {
   vertical-align: baseline;
 }
 
-sub { bottom: -.25em; }
-sup { top: -.5em; }
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
 
 
 //
@@ -201,15 +226,17 @@ a:not([href]):not([tabindex]) {
   &:focus {
     outline: 0;
   }
-  
+
 }
-a{
- 
-  &:hover{
+
+a {
+
+  &:hover {
     text-decoration: none !important;
     color: #51c4cc;
   }
 }
+
 //
 // Tables
 //
@@ -302,7 +329,8 @@ select {
 //    controls in Android 4.
 // 2. Correct the inability to style clickable types in iOS and Safari.
 button,
-[type="button"], // 1
+[type="button"],
+// 1
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none; // 2
@@ -387,7 +415,8 @@ progress {
   outline-offset: -2px; // 2. Correct the outline style in Safari.
   -webkit-appearance: none;
 }
-input:focus{
+
+input:focus {
   outline: none;
 }
 
@@ -433,79 +462,113 @@ template {
 }
 
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  /* Sit on top of the page content */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  cursor: pointer;
+  /* Add a pointer on hover */
 }
 
-.modal button{
+div#submittedMsg1{
+  background-color: #02020266;
+}
+
+.modal button {
   -webkit-appearance: none !important;
 }
-.btn-primary.focus, .btn-primary:focus, .btn-primary:hover, .btn-primary, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
   background-color: unset;
   border-color: unset;
 }
-.btn-primary:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
   box-shadow: unset;
 }
 
 
 
-@include media-breakpoint-down(xxl) { 
+@include media-breakpoint-down(xxl) {
   h2 {
     font-size: 65px;
-  }  
+  }
 
-  h3{
+  h3 {
     font-size: 35px;
   }
-  p{
+
+  p {
     font-size: 15px;
   }
-  ul li{
-     font-size: 15px;
-   }
-  }
-  @include media-breakpoint-down(xl) { 
-    h2{
-      font-size: 50px; 
-    }
-    h3{
-      font-size: 35px;
-    }
-    p{
-      font-size: 15px;
-    }
-  }
-  @include media-breakpoint-down(md) {  
-    h2{
-      font-size: 45px;
-    }
-    h3{
-      font-size: 35px;
-    }
-    p{
-      font-size: 14px;
-    }
-  }
-  @include media-breakpoint-down(sm){
-    p{
-      text-align: left;
-    }
-  }
-  @include media-breakpoint-down(xs) {  
-    h2{
-      font-size: 35px;
-    }
-    h3{
-      font-size: 25px;
-    }
-  } 
 
-  
+  ul li {
+    font-size: 15px;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  h2 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  p {
+    text-align: left;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}

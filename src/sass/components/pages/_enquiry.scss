@@ -1,5 +1,5 @@
 .enquiry {
-  margin-bottom: 76px;
+
 
   &__modaldialog {
     max-width: 640px;
@@ -10,6 +10,7 @@
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
+    color: #161715;
 
     &__modalcontent {
       background-color: transparent;
@@ -35,6 +36,7 @@
     }
 
     .modalbody {
+
       &__inputfeilds {
         .blockone {
           width: 100%;
@@ -86,7 +88,7 @@
             font-weight: $font-weight-regular;
             margin-bottom: 10px;
 
-            &.required::after {              
+            &.required::after {
               color: #eb2b1d;
               margin-left: 4px;
             }
@@ -96,6 +98,11 @@
           &.kids {
             input {
               margin-left: 30px;
+            }
+
+            p {
+              display: flex;
+              align-items: center;
             }
           }
 
@@ -107,12 +114,30 @@
             font-size: 20px;
             background-color: $input-color;
           }
+
+          p {
+            text-align: left;
+            font-size: 11px;
+          }
         }
       }
 
       .modalbody__btn {
         margin: 0 auto;
+
+        p {
+          button {
+            padding: 0 0 0 50px !important;
+            background: none;
+            cursor: pointer;
+          }
+        }
       }
+
+      .wpcf7-not-valid-tip {
+        font-size: 11px;
+      }
+
     }
   }
 }
@@ -138,6 +163,7 @@
             margin: 0 auto;
           }
         }
+
         &__inputfeilds {
           &--inputbox {
             margin-bottom: 15px;
@@ -145,6 +171,7 @@
             &.kids input {
               margin-left: 10px;
             }
+
             &.adults input {
               margin-left: 10px;
             }
@@ -152,13 +179,16 @@
             input {
               font-size: 16px;
               height: 57px;
+
               &::placeholder {
                 font-size: 16px;
               }
             }
+
             label {
               font-size: 16px;
             }
+
             select {
               height: 57px;
               font-size: 16px;
@@ -209,7 +239,7 @@
           .blockone {
             h4 {
               font-size: 12px;
-              margin-bottom: 0;
+              margin-bottom: 11px;
             }
           }
 
@@ -233,6 +263,7 @@
             &.adults,
             &.kids {
               flex-wrap: wrap;
+              gap: 20px;
 
               input {
                 font-size: 15px;
@@ -267,6 +298,10 @@
   .enquiry {
     .container {
       max-width: 480px;
+    }
+
+    .modalbody p {
+      text-align: left;
     }
   }
 }

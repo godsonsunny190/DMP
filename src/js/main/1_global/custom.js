@@ -268,8 +268,25 @@ $(document).ready(function () {
     },
     pagination: {
       el: ".swiper-pagination",
-      type: "fraction",
       clickable: true,
+      type: "fraction",
+      formatFractionCurrent: function (number) {
+        return ("0" + number).slice(-2);
+      },
+      formatFractionTotal: function (number) {
+        return ("0" + number).slice(-2);
+      },
+      renderFraction: function (currentClass, totalClass) {
+        return (
+          '<span class="' +
+          currentClass +
+          '"></span>' +
+          " / " +
+          '<span class="' +
+          totalClass +
+          '"></span>'
+        );
+      },
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -283,8 +300,11 @@ $(document).ready(function () {
 
   var swiper = new Swiper(".swiperDishes", {
     slidesPerView: 1,
-    spaceBetween: 200,
+    spaceBetween: 500,
     loop: true,
+    centeredSlides: false,
+    
+   
     breakpoints: {
       1200: {
         slidesPerView: 1,
@@ -293,7 +313,7 @@ $(document).ready(function () {
         slidesPerView: 1,
       },
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1,      
       },
     },
 
@@ -303,6 +323,8 @@ $(document).ready(function () {
     },
   });
 });
+
+
 ///////////////////////////////////////////////////////////////////
 
 var path = document.querySelector("#Path_23430");
@@ -333,16 +355,16 @@ window.addEventListener("scroll", function (e) {
 ///////////////////////////////////////////////
 
 //////////////////////////////phone Code///////////////////////////////////////////
-$(document).ready(function () {
-  const phoneInputField = document.querySelector("#phone");
+// $(document).ready(function () {
+//   const phoneInputField = document.querySelector("#phone");
 
-  const phoneInput = window.intlTelInput(phoneInputField, {
-    utilsScript:
-      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-    initialCountry: "ae",
-    separateDialCode: true,
-  });
-});
+//   const phoneInput = window.intlTelInput(phoneInputField, {
+//     utilsScript:
+//       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//     initialCountry: "ae",
+//     separateDialCode: true,
+//   });
+// });
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -351,6 +373,7 @@ function detect_active() {
   var get_active = $("#gallery-slide .gallery_item:first-child").data("class");
   $("#dp-dots li").removeClass("active");
   $("#dp-dots li[data-class=" + get_active + "]").addClass("active");
+  $(".swiper-pagination-current1").text("0"+get_active);  
 }
 $(".swiper-button-next-unique").click(function () {
   var total = $(".gallery_item").length;
