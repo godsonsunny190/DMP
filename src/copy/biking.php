@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<main class="pool details">
+<main class="pool details hellow">
     <section class="details-section">
         <div class=" container">
             <h2>Our leisure activities</h2>
@@ -57,7 +57,7 @@
 
         </div>
     </section>
- 
+
     <section class="rate-timing gs_reveal">
         <div class="container rate">
             <h3>Rate & Timings</h3>
@@ -129,17 +129,17 @@
         <div class="related__list--item">
                 <img class="related__img img-fluid" src="images/news1.png">
                 <h6>Private swimming pools</h6>
-                
+
             </div>
             <div class="related__list--item">
                 <img class="related__img img-fluid" src="images/news1.png">
                 <h6>Private swimming pools</h6>
-                
+
             </div>
             <div class="related__list--item">
                 <img class="related__img img-fluid" src="images/news1.png">
                 <h6>Private swimming pools</h6>
-                
+
             </div>
 
         </div>
@@ -157,7 +157,7 @@
 
                             </div>
                             <h4>Private swimming pools</h4>
-                          
+
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -167,7 +167,7 @@
 
                             </div>
                             <h4>Private swimming pools</h4>
-                          
+
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -177,7 +177,7 @@
 
                             </div>
                             <h4>Private swimming pools</h4>
-                          
+
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -187,7 +187,7 @@
 
                             </div>
                             <h4>Private swimming pools</h4>
-                        
+
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -197,7 +197,7 @@
 
                             </div>
                             <h4>Private swimming pools</h4>
-                   
+
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -207,7 +207,7 @@
 
                             </div>
                             <h4>Private swimming pools</h4>
-                    
+
                         </div>
                     </div>
                 </div>
@@ -216,9 +216,9 @@
 
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-                   
+
                 </div>
-               
+
             </div>
         </div>
     </section>
